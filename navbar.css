@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/hero.jpg");
+  background-position: center;
+  object-fit: cover;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(250, 250, 250, 0.1);
+  backdrop-filter: blur(50px);
+  padding: 1rem 5%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+}
+
+.icons {
+  display: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin-left: 35px;
+}
+#check{
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .icons {
+    display: block;
+    color: white;
+  }
+
+  #close-icon{
+    display: none;
+  }
+
+  #check:checked~.icons #menu-icon{
+    display: none;
+  }
+
+  #check:checked~.icons #close-icon{
+    display: block;
+  }
+
+  #check:checked~.navbar{
+    height: 16rem;
+transition: 0.3s ease;
+
+  }
+
+
+  .navbar {
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(250, 250, 250, 0.1);
+    backdrop-filter: blur(50px);
+    height: 0rem;
+    overflow: hidden;
+
+  }
+  .navbar a {
+    display: block;
+    margin-left: 0;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
